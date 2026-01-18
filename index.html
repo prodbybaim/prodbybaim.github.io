@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hi! ^^</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: radial-gradient(circle at top, #0b1020, #05060f 70%);
+  color: #eaeaea;
+}
+
+/* ===== HERO ===== */
+header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(120deg, rgba(0,229,255,0.15), rgba(255,0,92,0.15));
+}
+
+header h1 {
+  font-size: 3.5rem;
+  text-shadow: 0 0 25px rgba(0,229,255,0.7);
+}
+
+header p { opacity: 0.9; }
+
+.btn {
+  margin-top: 30px;
+  padding: 12px 30px;
+  border-radius: 30px;
+  border: 2px solid #00e5ff;
+  background: transparent;
+  color: #00e5ff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #00e5ff;
+  color: #000;
+  box-shadow: 0 0 25px #00e5ff;
+}
+
+/* ===== SECTIONS ===== */
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+h2 {
+  margin-bottom: 40px;
+  position: relative;
+}
+h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg,#00e5ff,#ff005c);
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 18px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+/* ===== RANK GLOW ===== */
+.rank-ascendant {
+  animation: ascGlow 2s infinite alternate;
+}
+.rank-mg {
+  animation: mgGlow 2s infinite alternate;
+}
+
+@keyframes ascGlow {
+  from { text-shadow: 0 0 10px #4cff8f; }
+  to   { text-shadow: 0 0 25px #4cff8f, 0 0 50px #2aff6a; }
+}
+
+@keyframes mgGlow {
+  from { text-shadow: 0 0 10px #ffb300; }
+  to   { text-shadow: 0 0 30px #ffd54f, 0 0 60px #ffea00; }
+}
+
+/* ===== AGENT / HERO CARDS ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 25px;
+}
+
+.character {
+  text-align: center;
+  padding: 25px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.15);
+  transition: 0.3s;
+}
+
+.character:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 0 30px rgba(0,229,255,0.5);
+}
+
+.character img {
+  width: 100px;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 0 15px rgba(0,229,255,0.7));
+}
+
+.character p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+}
+
+/* ===== MUSIC ===== */
+.music-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border: 1px solid #00e5ff;
+  color: #00e5ff;
+  background: rgba(0,0,0,0.6);
+  padding: 12px 16px;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0,229,255,0.5);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>B41M // VERCICELLE</h1>
+  <p>Sutet Student • IGL • Competitive eSports Player</p>
+  <button class="btn" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+    ENTER PROFILE
+  </button>
+</header>
+
+<section id="about">
+  <h2>About Me</h2>
+  <div class="card">
+    IGL, focused competitive player specializing in macro, leadership,
+    and defensive control across Valorant and MLBB.
+  </div>
+</section>
+
+<section>
+  <h2>Ranks & Achievements</h2>
+  <div class="card">
+    <p class="rank-ascendant">
+      🟢 <strong>Valorant:</strong> Ascendant 1 (Peak) — IGL, Sentinel, Controller
+    </p>
+    <p>Team: <strong>AYAM GORENG ESPORT</strong> — 🏆 3× Bekasi Gamers Tournament Winner</p>
+
+    <br>
+
+    <p class="rank-mg">
+      🟡 <strong>MLBB:</strong> Mythical Glory (61 Stars)
+    </p>
+    <p>
+      Beatrix Top 100 Jawa Barat<br>
+      Cyclops Top 100 Cikarang<br>
+      Xavier Top 100 Cikarang<br>
+      Clan: <strong>St. / Sutet All Star</strong>
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>Valorant – Main Agents</h2>
+  <div class="grid">
+    <div class="character">
+      <img src="https://static.wikia.nocookie.net/valorant/images/6/6f/Chamber_icon.png">
+      <p><strong>Chamber</strong></p>
+      <p>Sentinel • Operator Control</p>
+    </div>
+    <div class="character">
+      <img src="https://static.wikia.nocookie.net/valorant/images/1/18/Clove_icon.png">
+      <p><strong>Clove</strong></p>
+      <p>Controller • Space Control</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>MLBB – Main Heroes</h2>
+  <div class="grid">
+    <div class="character">
+      <img src="https://static.wikia.nocookie.net/mobile-legends/images/4/4c/Beatrix.png">
+      <p><strong>Beatrix</strong></p>
+      <p>Gold Lane</p>
+    </div>
+    <div class="character">
+      <img src="https://static.wikia.nocookie.net/mobile-legends/images/3/32/Cyclops.png">
+      <p><strong>Cyclops</strong></p>
+      <p>Mid Lane</p>
+    </div>
+    <div class="character">
+      <img src="https://static.wikia.nocookie.net/mobile-legends/images/1/12/Xavier.png">
+      <p><strong>Xavier</strong></p>
+      <p>Mid Lane</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Player Information</h2>
+  <div class="card">
+    <p><strong>Valorant IGN:</strong><br>noir#elvs<br>ツェレ#mon</p>
+    <p><strong>MLBB IGN:</strong><br>Vercicelle<br>ID: 1179777658 (13805)</p>
+  </div>
+</section>
+
+<footer>
+  © 2026 • baim sigma gamer anjay 
+</footer>
+
+<audio id="bgm" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+<button class="music-toggle" onclick="toggleMusic()">🎵 MUSIC</button>
+
+<script>
+const bgm = document.getElementById("bgm");
+let playing = false;
+function toggleMusic() {
+  playing ? bgm.pause() : bgm.play();
+  playing = !playing;
+}
+</script>
+
+</body>
+</html>
